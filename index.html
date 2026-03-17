@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abb1pseudonym | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    cursor:none;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(135deg,#020617,#0f172a);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* CURSOR */
+.cursor{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    position:fixed;
+    background:#38bdf8;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+    z-index:999;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    position:sticky;
+    top:0;
+    background:rgba(2,6,23,0.7);
+    backdrop-filter:blur(10px);
+}
+
+nav h1{
+    font-family:'Orbitron';
+    color:#38bdf8;
+}
+
+nav a{
+    margin-left:15px;
+    text-decoration:none;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* FOTO */
+.profile{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 0 30px #38bdf8;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TYPING */
+.typing{
+    font-size:22px;
+    color:#38bdf8;
+    margin-top:10px;
+    height:30px;
+}
+
+.hero h2{
+    font-size:35px;
+}
+
+/* BUTTON */
+.button{
+    margin-top:35px;
+    padding:8px 18px;
+    background:#38bdf8;
+    color:black;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* SKILLS */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;
+}
+
+.skill{
+    background:#020617;
+    padding:10px;
+    text-align:center;
+    border-radius:8px;
+}
+
+/* PROJECT */
+.project p{
+    margin:5px 0;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    color:#94a3b8;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .hero h2{
+        font-size:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav>
+<h1>A2F</h1>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="profile">
+<img src="aku.jpeg" alt="profile">
+</div>
+
+<h2>Hello, I'm Anas Ari Ferdika</h2>
+<div class="typing" id="typing"></div>
+
+<a href="https://wa.me/6285311887313" class="button">WhatsApp Me</a>
+
+</section>
+
+<div class="container">
+
+<div class="card" id="about">
+<h2>About Me</h2>
+<p>
+I am a professional Network Engineer and Web Developer who specializes in building 
+secure network systems and modern, responsive websites. I focus on performance, 
+security, and clean design to deliver the best user experience.
+</p>
+</div>
+
+<div class="card" id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">Network Configuration</div>
+<div class="skill">Routing & Switching</div>
+<div class="skill">Server Administration</div>
+<div class="skill">HTML & CSS</div>
+<div class="skill">Python</div>
+<div class="skill">React JS</div>
+<div class="skill">Cyber Security</div>
+<div class="skill">Linux Server</div>
+</div>
+</div>
+
+<div class="card" id="projects">
+<h2>Projects</h2>
+<div class="project">
+<p>🌐 Personal Portfolio Website</p>
+<p>🌐 Network Infrastructure Setup</p>
+<p>🌐 React Web Application</p>
+<p>🌐 Business Landing Page Design</p>
+</div>
+</div>
+
+<div class="card" id="contact">
+<h2>Contact</h2>
+<p>Email: aaanasariferdikaaa@email.com</p>
+<p>GitHub: github.com/abb1pseudonym-dev</p>
+<p>Instagram: a_verde9</p>
+
+<br>
+<a href="https://wa.me/6285311887313" class="button">Chat WhatsApp</a>
+</div>
+
+</div>
+
+<footer>© 2024 anasariferdika | All Rights Reserved</footer>
+
+<script>
+
+/* CURSOR */
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove",(e)=>{
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+/* TYPING */
+const text = ["Network Engineer","Web Designer","Developer"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+    if(i<text.length){
+        if(!isDeleting && j<=text[i].length){
+            current = text[i].substring(0,j++);
+        }else if(isDeleting && j>=0){
+            current = text[i].substring(0,j--);
+        }
+
+        document.getElementById("typing").innerHTML=current;
+
+        if(j==text[i].length){
+            isDeleting=true;
+            setTimeout(type,1000);
+            return;
+        }
+
+        if(j==0){
+            isDeleting=false;
+            i++;
+        }
+    }else{
+        i=0;
+    }
+
+    setTimeout(type,isDeleting?50:100);
+}
+
+type();
+
+</script>
+
+</body>
+</html>
